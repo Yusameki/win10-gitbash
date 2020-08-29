@@ -45,7 +45,7 @@ Git, Anacondaを使います．
 
 インストールが終わったら，Anaconda Navigatorを開きます．
 
-
+![Navi.png](https://github.com/Yusameki/win10-gitbash/blob/master/Pic/Navi.png?raw=true)
 
 VSCodeをインストールします．
 
@@ -66,11 +66,28 @@ Power ShellやコマンドプロンプトにもAnacondaのアプリが使える�
 > Windows側のPATH設定
 
 1. 「コントロールパネル」から「システムとセクシュアリティ」をクリックします．
+
+   ![1.png](https://github.com/Yusameki/win10-gitbash/blob/master/Pic/1.png?raw=true)
+
 2. 次にの画面で「システム」をクリックします．
+
+   ![2.png](https://github.com/Yusameki/win10-gitbash/blob/master/Pic/2.png?raw=true)
+
 3. 「システム」画面の左側にある「システムの詳細設定」をクリックします．
+
+   ![3.png](https://github.com/Yusameki/win10-gitbash/blob/master/Pic/3.png?raw=true)
+
 4. 「環境変数」をクリックします．
+
+   ![4.png](https://github.com/Yusameki/win10-gitbash/blob/master/Pic/4.png?raw=true)
+
 5. この画面で「システム環境変数」にある「Path」の項目を編集します．
+
+   ![5.png](https://github.com/Yusameki/win10-gitbash/blob/master/Pic/5.png?raw=true)
+
 6. ここに「Anaconda3」と「Anaconda3/Scripts」を追加して，一番上にします．
+
+   ![6.png](https://github.com/Yusameki/win10-gitbash/blob/master/Pic/6.png?raw=true)
 
 これでWindows上のPATH追加は完了です．
 
@@ -97,6 +114,12 @@ export PATH=$PATH:"/d/Users/yusam/Anaconda3/Scripts"
 
 
 ## VS CodeのデフォルトターミナルをGit Bashにする
+
+最後の一歩です！
+
+WindowsではVS CodeのデフォルトターミナルがPower Shellになっています，
+
+それを今回インストールしたGit Bashに変更します．
 
 
 
