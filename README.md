@@ -109,7 +109,7 @@ export PATH=$PATH:"/d/Users/ユーザー名/Anaconda3"
 export PATH=$PATH:"/d/Users/ユーザー名/Anaconda3/Scripts"
 ```
 
-を追加して保存します．
+を追加して保存します．(""の中は自分のAnacondaの場所！)
 
 
 
@@ -129,11 +129,27 @@ WindowsではVS CodeのデフォルトターミナルがPower Shellになって�
 
 
 
+設定画面の右上から設定用のjsonファイルを開きます．
+
+![VSCode2.png](https://github.com/Yusameki/win10-gitbash/blob/master/Pic/VSCode2.png?raw=true)
 
 
 
+そのjsonファイルに
+
+```json
+{
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe"
+}
+```
+
+を追加します．(""の中は自分のGit Bashプログラミングの場所！)
 
 
+
+これで全て終わります！
+
+お疲れ様でした．
 
 
 
