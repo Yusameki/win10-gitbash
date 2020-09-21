@@ -151,6 +151,9 @@ WindowsではVS CodeのデフォルトターミナルがPower Shellになって�
 
 お疲れ様でした．
 
+追記：やはりPATHの問題でAnacondaの全ライブラリーを使用することが難しいため，
+GPUも使えるWSL2を強くおすすめします．
+
 
 
 
