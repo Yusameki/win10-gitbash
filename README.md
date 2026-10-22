@@ -4,7 +4,7 @@
 
 **A record of using Windows 10 like Linux — after getting tired of PowerShell's awkwardness and the endless PATH juggling**
 
-<sub>**English** · [中文](README.zh-CN.md)</sub>
+<sub>**English** · [日本語](README.ja.md) · [中文](README.zh-CN.md)</sub>
 
 <sub>Git + Anaconda, pieced together so that "writing Python comfortably" actually works ( ¯꒳¯ )</sub>
 
