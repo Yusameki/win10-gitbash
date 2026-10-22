@@ -4,7 +4,7 @@
 
 **受不了 PowerShell 的别扭和 PATH 的来回折腾，于是像用 Linux 那样用 Win10 的记录**
 
-<sub>[English](README.md) · **中文**</sub>
+<sub>[English](README.md) · [日本語](README.ja.md) · **中文**</sub>
 
 <sub>用 Git + Anaconda，把「能舒服地写 Python」这件事拼起来 ( ¯꒳¯ )</sub>
 
