@@ -1,107 +1,75 @@
-# 作業環境を快適にしたい！
-自分用の環境構築案です．
+<div align="center">
 
-Power Shellの使いにくさとPATH設定の問題に耐えられず，
+# 🌊 win10-gitbash
 
-Linuxと同じような感覚でWin10を使うための記録です．
+**受不了 PowerShell 的别扭和 PATH 的来回折腾，于是像用 Linux 那样用 Win10 的记录**
 
-Git, Anacondaを使います．
+<sub>用 Git + Anaconda，把「能舒服地写 Python」这件事拼起来 ( ¯꒳¯ )</sub>
 
+</div>
 
+---
 
-## Win10版のGitをインストール
+## 📑 目录
 
-以下のサイトからgitをダウンロードしてインストールします．
+- [安装 Win10 版 Git](#安装-win10-版-git)
+- [安装 Anaconda](#安装-anaconda)
+- [把 Anaconda 的 PATH 加进 Windows](#把-anaconda-的-path-加进-windows)
+- [让 Git Bash 认出 conda](#让-git-bash-认出-conda)
+- [把 VS Code 的默认终端换成 Git Bash](#把-vs-code-的默认终端换成-git-bash)
+- [最后的小提醒](#最后的小提醒)
 
-[Git](https://git-scm.com/)
+---
 
-インストールする時，
+## 安装 Win10 版 Git
 
-- **Editor**: 
+从 [git-scm.com](https://git-scm.com/) 下载安装。
 
-  Visual Studio Code
+安装时这两个选项请留意：
 
-- **PATH environment**: 
+- **Editor**：选 `Visual Studio Code`
+- **PATH environment**：选 `Git from the command line and also from 3rd-party software`
 
-  Git from the command line and also from 3rd-party software
+装好后就能用下面这个 Bash 终端了：
 
-にします．
+![GitBash](https://github.com/Yusameki/win10-gitbash/blob/master/Pic/GitBash.png?raw=true)
 
-インストールが成功すれば下のBash端末が使えるようになります．
+## 安装 Anaconda
 
-![GitBash.png](https://github.com/Yusameki/win10-gitbash/blob/master/Pic/GitBash.png?raw=true)
+从 [Anaconda 官网](https://www.anaconda.com/products/individual) 下载安装包，安装过程中的选项可以一路跳过。
 
+装完之后打开 Anaconda Navigator：
 
+![Navigator](https://github.com/Yusameki/win10-gitbash/blob/master/Pic/Navi.png?raw=true)
 
-## Anacondaをインストール
+顺手在里面把 VS Code 也装上，这样要用的软件就齐了。
 
-以下のサイトからAnacondaのインストーラーをダウンロードします．
+## 把 Anaconda 的 PATH 加进 Windows
 
-[Anaconda](https://www.anaconda.com/products/individual)
+设置好之后，不只是 Git Bash，连 PowerShell 和命令提示符都能直接用 conda 里的东西。
 
-インストールする時は全部飛ばしても大丈夫です．
+> **Windows 侧的 PATH 设置**
 
+1. 打开「控制面板」，点击「系统和安全」
+   ![1](https://github.com/Yusameki/win10-gitbash/blob/master/Pic/1.png?raw=true)
+2. 在下一个画面点击「系统」
+   ![2](https://github.com/Yusameki/win10-gitbash/blob/master/Pic/2.png?raw=true)
+3. 点击「系统」画面左侧的「高级系统设置」
+   ![3](https://github.com/Yusameki/win10-gitbash/blob/master/Pic/3.png?raw=true)
+4. 点击「环境变量」
+   ![4](https://github.com/Yusameki/win10-gitbash/blob/master/Pic/4.png?raw=true)
+5. 在「系统变量」里找到 `Path`，点「编辑」
+   ![5](https://github.com/Yusameki/win10-gitbash/blob/master/Pic/5.png?raw=true)
+6. 把 `Anaconda3` 和 `Anaconda3/Scripts` 加进去，并且挪到最上面
+   ![6](https://github.com/Yusameki/win10-gitbash/blob/master/Pic/6.png?raw=true)
 
+到这里 Windows 上的 PATH 就加完了。
 
-インストールが終わったら，Anaconda Navigatorを開きます．
+## 让 Git Bash 认出 conda
 
-![Navi.png](https://github.com/Yusameki/win10-gitbash/blob/master/Pic/Navi.png?raw=true)
+接着改 `bash.bashrc`。如果安装 Git 时没改过安装位置，它一般在 `C:\Program Files\Git\etc`。
 
-VSCodeをインストールします．
-
-これで使用するソフトが整えました！
-
-
-
-## Win10にAnacondaのPATHを追加する
-
-ここからPATHの設定を行う，
-
-上手くいくと，Git Bashだけでなく，
-
-Power ShellやコマンドプロンプトにもAnacondaのアプリが使えるようになります．
-
-
-
-> Windows側のPATH設定
-
-1. **「コントロールパネル」から「システムとセクシュアリティ」をクリックします．**
-
-   ![1.png](https://github.com/Yusameki/win10-gitbash/blob/master/Pic/1.png?raw=true)
-
-2. **次にの画面で「システム」をクリックします．**
-
-   ![2.png](https://github.com/Yusameki/win10-gitbash/blob/master/Pic/2.png?raw=true)
-
-3. **「システム」画面の左側にある「システムの詳細設定」をクリックします．**
-
-   ![3.png](https://github.com/Yusameki/win10-gitbash/blob/master/Pic/3.png?raw=true)
-
-4. **「環境変数」をクリックします．**
-
-   ![4.png](https://github.com/Yusameki/win10-gitbash/blob/master/Pic/4.png?raw=true)
-
-5. **この画面で「システム環境変数」にある「Path」の項目を編集します．**
-
-   ![5.png](https://github.com/Yusameki/win10-gitbash/blob/master/Pic/5.png?raw=true)
-
-6. **ここに「Anaconda3」と「Anaconda3/Scripts」を追加して，一番上にします．**
-
-   ![6.png](https://github.com/Yusameki/win10-gitbash/blob/master/Pic/6.png?raw=true)
-
-これでWindows上のPATH追加は完了です．
-
-
-
-> Git BashにAnacondaのPATHを追加
-
-bash.bashrcファイルにPATHを追加します，
-
-Gitをインストールする際にインストール先を変えていない場合，
-
-`C:\Program Files\Git\etc`にあると思います．
-
-その一番下に
+在最下面加上：
 
 ```shell
 #Anaconda PATH
@@ -109,52 +77,41 @@ export PATH=$PATH:"/d/Users/ユーザー名/Anaconda3"
 export PATH=$PATH:"/d/Users/ユーザー名/Anaconda3/Scripts"
 ```
 
-を追加して保存します．(""の中は自分のAnacondaの場所！)
+保存即可（引号里记得换成自己的 Anaconda 位置哦）。
 
+## 把 VS Code 的默认终端换成 Git Bash
 
+最后一步了 ✨
 
-## VS CodeのデフォルトターミナルをGit Bashにする
+Windows 上 VS Code 的默认终端是 PowerShell，现在我们把它换成刚装好的 Git Bash。
 
-最後の一歩です！
+先从 VS Code 左下角打开设置：
 
-WindowsではVS CodeのデフォルトターミナルがPower Shellになっています，
+![VSCode1](https://github.com/Yusameki/win10-gitbash/blob/master/Pic/VSCode1.png?raw=true)
 
-それを今回インストールしたGit Bashに変更します．
+点击设置画面右上角，打开设置用的 json 文件：
 
+![VSCode2](https://github.com/Yusameki/win10-gitbash/blob/master/Pic/VSCode2.png?raw=true)
 
-
-まずはVS Codeの左下から設定画面を開きます．
-
-![VSCode1.png](https://github.com/Yusameki/win10-gitbash/blob/master/Pic/VSCode1.png?raw=true)
-
-
-
-設定画面の右上から設定用のjsonファイルを開きます．
-
-![VSCode2.png](https://github.com/Yusameki/win10-gitbash/blob/master/Pic/VSCode2.png?raw=true)
-
-
-
-そのjsonファイルに
+在里面加上：
 
 ```json
 {
-    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe"
+  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe"
 }
 ```
 
-を追加します．(""の中は自分のGit Bashプログラミングの場所！)
+（引号里换成自己 Git Bash 程序的路径）
 
+这样就全部完成啦，辛苦啦 (´-ω-`)
 
+## 最后的小提醒
 
-これで全て終わります！
+> 实际用下来，因为 PATH 的老问题，Anaconda 里所有库都能顺利调用还是挺难的。
+> **能吃到 GPU 的 WSL2 现在更推荐** —— 这条路的尽头差不多就是那里 ( ˘•ω•˘ )
 
-お疲れ様でした．
+---
 
-追記：やはりPATHの問題でAnacondaの全ライブラリーを使用することが難しいため，
-GPUも使えるWSL2を強くおすすめします．
-
-
-
-
-
+<div align="center">
+<sub>一份写给自己的环境搭建备忘，也希望能帮到正在折腾 Windows 的你</sub>
+</div>
